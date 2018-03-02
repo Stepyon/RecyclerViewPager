@@ -139,7 +139,7 @@ public class RecyclerViewPager extends RecyclerView {
 
     @Override
     public void setAdapter(Adapter adapter) {
-        mViewPagerAdapter = ensureRecyclerViewPagerAdapter(adapter);
+        mViewPagerAdapter = null == adapter ? null : ensureRecyclerViewPagerAdapter(adapter);
         super.setAdapter(mViewPagerAdapter);
     }
 
